@@ -1,0 +1,16 @@
+{
+  "name": "nodeserver",
+  "version": "0.0.1",
+  "description": "web",
+  "author": "tianmo <azhangwq@gmail.com>",
+  "dependencies": {
+    "koa": "*",
+    "koa-static": "*",
+    "bluebird": "*"
+    },
+  "devDependencies": {
+    "mocha": "*",
+    "expect.js": "*",
+    "coffee-script": "*"
+  }
+}

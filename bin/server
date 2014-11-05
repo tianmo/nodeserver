@@ -1,0 +1,31 @@
+cmd=$1
+# start service
+start() {
+	script="node --harmony ./lib/index.js"
+	echo $script
+	nohup $script 2>&1 >> ./nodejs_stdout.log &
+	echo "server start"
+}
+
+# stop service
+stop() {
+	echo "server stop"
+	killall node
+}
+
+# main case
+case $cmd in
+	start|pubstart)
+		start;
+		exit $?;
+	;;
+	stop)
+		stop;
+		exit $?;
+	;;
+	restart)
+		stop;
+		start;
+		exit $?;
+	;;
+	esac

@@ -1,0 +1,11 @@
+/node_modules/
+/run/*
+/out
+/out/test
+/nohup.out
+/logs/
+/.idea/*
+.DS_Store
+.git
+.npm-debug.log
+nodejs_stdout.log
