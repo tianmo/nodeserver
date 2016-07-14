@@ -3,7 +3,7 @@ cmd=$1
 start() {
 	script="node --harmony ./lib/index.js"
 	echo $script
-	nohup $script 2>&1 >> ./nodejs_stdout.log &
+	nohup $script 2>&1 >> ../logs/nodejs_stdout.log &
 	echo "server start"
 }
 
