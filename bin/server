@@ -3,7 +3,7 @@ cmd=$1
 start() {
 	script="node --harmony ./lib/index.js"
 	echo $script
-	nohup $script 2>&1 >> ../logs/nodejs_stdout.log &
+	nohup $script 2>&1 >> ./logs/nodejs_stdout.log &
 	echo "server start"
 }
 
@@ -17,15 +17,19 @@ stop() {
 case $cmd in
 	start|pubstart)
 		start;
+		sleep 2;
 		exit $?;
 	;;
 	stop)
 		stop;
+		sleep 2;
 		exit $?;
 	;;
 	restart)
 		stop;
+		sleep 1;
 		start;
+		sleep 2;
 		exit $?;
 	;;
 	esac
